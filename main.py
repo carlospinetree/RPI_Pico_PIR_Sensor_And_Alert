@@ -25,8 +25,10 @@ def pirSensorInterruptHandler(pin):
 
 # Main
 def main():
+    print("Program starting...")
     ledStartupSignal()    
     PIR_sensor.irq(trigger=Pin.IRQ_FALLING|Pin.IRQ_RISING, handler=pirSensorInterruptHandler)
+    print("Program initialized")
 
 
 main()
